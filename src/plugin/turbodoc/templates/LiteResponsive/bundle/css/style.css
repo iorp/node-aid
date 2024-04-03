@@ -1,0 +1,82 @@
+ 
+/* Container */
+#container{ 
+  padding-left:0!important;
+  /* padding-right:0!important; */
+ 
+    position:fixed;
+     top:56px;
+     bottom:0;
+     height:auto;
+     overflow-y: auto;
+ 
+}
+
+#sidebar{
+  overflow-y: auto;
+  top:56px;
+  bottom:0;
+  position:fixed;
+  z-index:1;
+}
+#sidebar::-webkit-scrollbar,
+#container::-webkit-scrollbar  {
+  width: 8px;
+}
+
+#sidebar::-webkit-scrollbar-thumb,
+#container::-webkit-scrollbar-thumb {
+  background-color: darkgray; /* Change the color to your preferred one */
+  /* border-radius: 6px; */
+}
+
+#sidebar::-webkit-scrollbar-track,
+#container::-webkit-scrollbar-track  {
+  background-color: #f1f1f1; /* Change the color to your preferred one */
+}
+ 
+.tbd-treeview{
+  height: auto;
+    overflow-y: auto;
+}
+
+.tbd-treeview {
+  border-radius:0px;
+}
+/* Treeview */
+.tbd-treeview  .list-group-item{
+    cursor: default;
+    border: 0!important;
+    border-radius: 0!important;
+}
+ 
+/* Treeview */
+.tbd-treeview .list-group-item:hover{
+background-color: blue;
+color:white;
+}
+
+ 
+.tbd-treeview *.chevron:before {
+  content: "◂";
+  /*right ▸ */
+}
+
+.tbd-treeview *.in>.chevron:before {
+  content: "▾";
+  /*down*/
+}
+
+.tbd-treeview *.chevron{
+  float:right
+}
+
+
+
+/* Bootstrap legacy, todo, add it to botstrap 5, when the batch is full  */
+@media (max-width: 576px)  {
+  .col-xs-12 {
+ 
+    width: 100%;
+  }
+}

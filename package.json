@@ -1,0 +1,27 @@
+{
+  "name": "@iorp/node-aid",
+  "public": "true",
+  "version": "0.0.1",
+  "description": "An organized node/js tool set.",
+  "main": "lib/index.js",
+  "scripts": {
+    "docs": "jsdoc -c jsdoc.config.js",
+    "test": "node test/test.js",
+    "clean": "rm -rf lib || rd /s /q lib",
+    "build": "npm run clean && babel src --out-dir lib",
+    "postbuild": "npm link"
+  },
+  "author": "Iorp",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "jsdoc": "^4.0.2",
+    "mocha": "^10.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "rimraf": "^5.0.5"
+  }
+}

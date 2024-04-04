@@ -73,10 +73,10 @@ color:white;
 
 
 
-
+/* Bootstrap legacy, todo, add it to botstrap 5, when the batch is full  */
 @media (max-width: 576px)  {
   .col-xs-12 {
-    /* CSS rules for landscape phone devices */
+ 
     width: 100%;
   }
 }

@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-const callDevCmd=require('./src/plugin/turbodev/callDevCmd');
+const callDevCmd=require('./callDevCmd');
 
 // locally import Drafter
 // const Drafter=require('./src/plugin/turbodoc/Drafter');

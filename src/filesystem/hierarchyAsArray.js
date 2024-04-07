@@ -70,7 +70,7 @@ Great test
   });
   //console.log(JSON.stringify(hierarchyArray,null,2));
   
-  if(!hierarchyArray) return {error:true,code:'TurbodocGenerateDocsError',exception:'hierarchyArray couldn not be created'}
+  if(!hierarchyArray) return {error:true,code:'errorcGenerateDocsError',exception:'hierarchyArray couldn not be created'}
   
   const generationResponse =  await generateHierarchy(output, hierarchyArray,{verbose:true,overwrite:null});
   

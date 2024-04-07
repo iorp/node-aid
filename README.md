@@ -1,10 +1,6 @@
 
-# TODO: 
-- kill turbodoc here and import it from npm 
-- separate turbodev 
-- kill turbodev here and import it from npm 
-- src index.js accesses creator for on build, do it in turbodev
-- readme file and
+# TODO:   
+- readme file 
  
  
 

@@ -1,10 +1,10 @@
 {
   "name": "@iorp/node-aid",
   "public": "true",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "An organized node/js tool set.",
   "main": "lib/index.js",
-  "scripts": { 
+  "scripts": {
     "test": "node test/test.js",
     "clean": "rm -rf lib || rd /s /q lib",
     "build": "npm run clean && babel src --out-dir lib",

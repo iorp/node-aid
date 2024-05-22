@@ -36,7 +36,7 @@
 *   });
  * 
  */
-const httpRequest = async (api, data, method = 'POST', headers = { 'Content-Type': 'application/json' }) => {
+const OLD_kill_httpRequest = async (api, data, method = 'POST', headers = { 'Content-Type': 'application/json' }) => {
     try {
       const response = await fetch(api, {
         method: method,
@@ -61,4 +61,37 @@ const httpRequest = async (api, data, method = 'POST', headers = { 'Content-Type
       return { error: 1, code: 'httpRequestException', exception: error };
     }
   };
+
+  const httpRequest = async (api, data, method = 'POST', headers = { 'Content-Type': 'application/json' }) => {
+    try {
+      const response = await fetch(api, {
+        method: method,
+        headers: headers,
+        body: JSON.stringify(data),
+      });
+  
+      if (!response.ok) {
+        // If the response is not OK (status is not in the range 200-299)
+        return { error: 1, code: 'httpResponseError', status: response.status, statusText: response.statusText };
+      }
+  
+      const textResponse = await response.text();
+  
+      // Try parsing the text response as JSON
+      let jsonResponse;
+      try {
+        jsonResponse = JSON.parse(textResponse);
+      } catch (error) {
+        // If parsing fails, it's not a valid JSON
+        return { error: 1, code: 'jsonParseError', text: textResponse };
+      }
+  
+      return jsonResponse;
+    } catch (error) {
+      // Handle network or other errors
+      return { error: 1, code: 'httpRequestException', exception: error.message };
+    }
+  };
+  
+
   module.exports =httpRequest;

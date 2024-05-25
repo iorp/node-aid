@@ -5,6 +5,7 @@
   "description": "An organized node/js tool set.",
   "main": "lib/index.js",
   "scripts": {
+    "makedoc": "node ./node_modules/@iorp/node-turbodoc/src/scripts/turbodoc_default.js ./turbodoc.config.js",
     "test": "node test/test.js",
     "clean": "rm -rf lib || rd /s /q lib",
     "build": "npm run clean && babel src --out-dir lib",
